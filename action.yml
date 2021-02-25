@@ -1,0 +1,20 @@
+name: Use Commitizen
+description: Run commitizen commands in your workflow
+
+runs:
+  using: docker
+  image: Dockerfile
+
+branding:
+  icon: git-commit
+  color: purple
+
+inputs:
+  run:
+    description: A list of commands to run
+    required: true
+
+  requirements:
+    description: A list of custom plugins or rules to install
+    required: false
+    default: ""
